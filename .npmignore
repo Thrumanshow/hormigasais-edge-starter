@@ -1,5 +1,17 @@
+
+# ============================================================
+# Archivos internos de laboratorio
+# Local artifacts
+# Logs locales
+# Paquetes generados
+# Python cache
+# Termux laboratory scripts
 **/__pycache__/
+*.bak
 *.pyc
 *.pyo
-logs/
 *.tgz
+audit_*.sh
+logs/
+patch_*.sh
+update_*.sh

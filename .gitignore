@@ -1,0 +1,29 @@
+# HormigasAIS Edge Starter
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+logs/
+*.log
+
+# npm artifacts
+*.tgz
+node_modules/
+
+# Local backups
+*.bak
+*.bak2
+*.bak3
+*.backup
+
+# Laboratorio interno
+audit_*.sh
+patch_*.sh
+publish_*.sh
+fix_*.sh
+git_status_*.txt
+npm_pack_*.log

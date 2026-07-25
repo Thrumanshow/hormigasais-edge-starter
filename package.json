@@ -2,13 +2,13 @@
   "name": "hormigasais-edge-starter",
   "version": "0.1.0",
   "description": "Starter template para desplegar un nodo soberano HormigasAIS con agentes LBH. Incluye SDK de protocolos LBH, generadores automáticos y agentes edge.",
-  "main": "generator.js",
+  "main": "./generator.js",
   "bin": {
-    "create-hormigas-node": "./generator.js"
+    "create-hormigas-node": "generator.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Thrumanshow/hormigasais-edge-starter.git"
+    "url": "git+https://github.com/Thrumanshow/hormigasais-edge-starter.git"
   },
   "keywords": [
     "hormigasais",
@@ -37,5 +37,20 @@
   },
   "engines": {
     "node": ">=14.0.0"
-  }
+  },
+  "type": "module",
+  "files": [
+    "generator.js",
+    "generator.py",
+    "bootstrap.sh",
+    "protocols",
+    "agents",
+    "scripts",
+    "utils",
+    "generators",
+    ".hormigasais",
+    "README.md",
+    "package.json"
+  ],
+  "packageManager": "npm@11.15.0"
 }
