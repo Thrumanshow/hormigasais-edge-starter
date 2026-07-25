@@ -21,7 +21,7 @@ bash bootstrap.sh
 python3 generator.py
 \`\`\`
 
-### Opción 2: Cuando esté publicado en npm (próximamente)
+### Opción 2:
 
 \`\`\`bash
 npx create-hormigas-node
@@ -34,7 +34,6 @@ npx create-hormigas-node
 - **Agentes autónomos**: \`hormiga_centinela\` y \`hormiga_relevo\`
 - **Generadores modulares** (config, protocols, scripts, agents, contracts)
 - **Verificación POST** del SDK (\`verify_sdk.py\`)
-- Soporte para secretos en \`~/.hormigas_secrets\`
 
 ## Comandos útiles
 
@@ -62,5 +61,7 @@ hormigasais-edge-starter/
 ---
 
 **Made with ❤️ for digital sovereignty**
+Author: Cristhiam Leonardo Hernández Quiñonez (CLHQ)
+© HormigasAIS • Lenguaje Binario HormigasAIS (LBH)
 
 [hormigasais.com](https://hormigasais.com) | [@Thrumanshow](https://github.com/Thrumanshow)
