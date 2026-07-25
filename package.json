@@ -1,6 +1,6 @@
 {
   "name": "hormigasais-edge-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Starter template para desplegar un nodo soberano HormigasAIS con agentes LBH. Incluye SDK de protocolos LBH, generadores automáticos y agentes edge.",
   "main": "./generator.js",
   "bin": {
