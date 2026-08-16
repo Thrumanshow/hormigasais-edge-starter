@@ -1,7 +1,7 @@
 {
   "name": "hormigasais-edge-starter",
   "version": "0.1.2",
-  "description": "Starter template para desplegar un nodo soberano HormigasAIS con agentes LBH. Incluye SDK de protocolos LBH, generadores autom\u00e1ticos y agentes edge.",
+  "description": "Starter template para desplegar un nodo soberano HormigasAIS con agentes LBH. Incluye SDK de protocolos LBH, generadores automáticos y agentes edge.",
   "main": "./generator.js",
   "bin": {
     "create-hormigas-node": "generator.js"
@@ -19,7 +19,7 @@
     "termux",
     "offline-first"
   ],
-  "author": "Cristhiam Leonardo Hern\u00e1ndez Qui\u00f1onez",
+  "author": "Cristhiam Leonardo Hernández Quiñonez",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Thrumanshow/hormigasais-edge-starter/issues"
@@ -29,7 +29,7 @@
     "start": "python3 generator.py",
     "bootstrap": "bash bootstrap.sh",
     "verify": "python3 scripts/verify_sdk.py",
-    "postinstall": "python3 generator.py --quick || echo 'HormigasAIS Edge Starter instalado'",
+    "postinstall": "python3 generator.py --quick",
     "test": "python3 scripts/verify_sdk.py"
   },
   "dependencies": {

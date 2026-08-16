@@ -46,6 +46,9 @@ def main():
     print("🐜 HormigasAIS Generator")
     print("============================================")
 
+    fallos = []
+    faltantes = []
+
     for module_name in MODULES:
 
         print(f"[LOAD] {module_name}")
@@ -68,15 +71,27 @@ def main():
 
         except ModuleNotFoundError:
 
-            print(f"[WAIT] {module_name} aún no existe")
+            print(f"[FALTA] {module_name} no existe — módulo obligatorio")
+            faltantes.append(module_name)
 
         except Exception as e:
 
             print(f"[FAIL] {module_name}")
             print(e)
+            fallos.append(module_name)
 
     print("")
-    print("Proceso terminado.")
+
+    if faltantes or fallos:
+        print("❌ Proceso terminado CON ERRORES.")
+        if faltantes:
+            print(f"   Módulos faltantes: {", ".join(faltantes)}")
+        if fallos:
+            print(f"   Módulos con fallo: {", ".join(fallos)}")
+        print("============================================")
+        sys.exit(1)
+
+    print("✅ Proceso terminado correctamente.")
     print("============================================")
 
 
