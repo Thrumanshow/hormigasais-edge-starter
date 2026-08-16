@@ -6,26 +6,14 @@ Starter oficial para desplegar un **nodo soberano** de HormigasAIS con agentes L
 
 ## 🚀 Instalación Rápida
 
-### Opción 1: Desde GitHub (Recomendada actualmente)
-
-\`\`\`bash
-npx create-hormigas-node@latest
-\`\`\`
-
-O manualmente:
-
-\`\`\`bash
+```bash
 git clone https://github.com/Thrumanshow/hormigasais-edge-starter.git
 cd hormigasais-edge-starter
 bash bootstrap.sh
 python3 generator.py
-\`\`\`
+```
 
-### Opción 2:
-
-\`\`\`bash
-npx create-hormigas-node
-\`\`\`
+> ⚠️ El comando `npx create-hormigas-node` aún no está publicado en npm. Usa el método manual mostrado arriba.
 
 ## ¿Qué incluye?
 

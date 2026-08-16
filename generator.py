@@ -22,7 +22,6 @@ sys.path.insert(0, str(ROOT))
 
 MODULES = [
     "config_generator",
-    "readme_generator",
     "protocol_generator",
     "contracts_generator",
     "agents_generator",
