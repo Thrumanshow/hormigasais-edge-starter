@@ -33,7 +33,7 @@
     "test": "python3 scripts/verify_sdk.py"
   },
   "dependencies": {
-    "jspdf": "^2.5.1"
+    "jspdf": "^4.2.1"
   },
   "engines": {
     "node": ">=14.0.0"
