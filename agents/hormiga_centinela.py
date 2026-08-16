@@ -1,41 +1,68 @@
-#!/usr/bin/env python3
-"""
-hormiga_centinela.py
-"""
-import time
-import json
-import sys
-from pathlib import Path
+import os
+import time, json, random, sys, hmac, hashlib
 
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
+VERSION   = "0.3.0"
+NODE_ID   = "centinela_escuela_01"
+TARGET    = "mosquito_pulse"
+SECRET    = os.environ.get("LAB_ESCUELA_SECRET", "hormigasais-colonia-escuela-demo").encode()
 
-from utils.env_loader import load_termux_secrets
-load_termux_secrets()
+class UmbralAdaptativo:
+    def __init__(self, base=0.75, ventana=20):
+        self.historial = []
+        self.base      = base
+        self.ventana   = ventana
 
-from protocols.encoder import make_header, encode_packet
-from protocols.constants import TYPE_CODES
-from protocols.signer import seal_action
+    def actualizar(self, v):
+        self.historial.append(v)
+        if len(self.historial) > self.ventana:
+            self.historial.pop(0)
 
-NODE_ID = "A16"
-OWNER = "Cristhiam Leonardo Hernández Quiñonez"
-INTERVAL = 30
+    @property
+    def umbral(self):
+        if len(self.historial) < 5:
+            return self.base
+        media = sum(self.historial) / len(self.historial)
+        return round(min(media + 0.15, 0.92), 3)
 
-def emit_pulse():
-    payload = json.dumps({
-        "agent": "hormiga_centinela",
-        "status": "ACTIVE",
-        "node": NODE_ID,
-        "ts": int(time.time())
-    })
-    header = make_header(NODE_ID[:3], "00")
-    frame = encode_packet(header, TYPE_CODES["FUEL"], payload)
-    seal = seal_action(payload, OWNER)
-    print("[CENTINELA] FUEL pulse emitido")
-    return frame
+def firmar(paquete_dict):
+    payload = json.dumps(paquete_dict, sort_keys=True).encode()
+    sig     = hmac.new(SECRET, payload, hashlib.sha256).hexdigest()[:16]
+    paquete_dict["sig"] = sig
+    return json.dumps(paquete_dict)
+
+def generar_feromona(intensidad):
+    p = {
+        "timestamp": round(time.time(), 6),
+        "type":      TARGET,
+        "origin":    NODE_ID,
+        "status":    "active",
+        "intensity": round(intensidad, 2),
+        "version":   VERSION,
+    }
+    return firmar(p)
+
+def ejecutar():
+    ua = UmbralAdaptativo()
+    print(f"[HormigasAIS] Centinela [{NODE_ID}] v{VERSION}")
+    print(f"Escaneando espectro infrarrojo... Ctrl+C para detener.")
+    print("-" * 70)
+    try:
+        while True:
+            lectura = random.uniform(0.1, 1.0)
+            ua.actualizar(lectura)
+            if lectura > ua.umbral:
+                print(f"[ALERTA] Gradiente={round(lectura,2)} Umbral={ua.umbral}")
+                paquete = generar_feromona(lectura)
+                print(f"[XOXO-BUS] FEROMONA_EMITIDA ==> {paquete}")
+                print("[BUS] Nodos trampa alertados.")
+                print("-" * 70)
+                time.sleep(5)
+            else:
+                sys.stdout.write("* ")
+                sys.stdout.flush()
+                time.sleep(1.5)
+    except KeyboardInterrupt:
+        print("\n[STOP] Centinela detenido. Modo letargo.")
 
 if __name__ == "__main__":
-    print(f"[CENTINELA] Iniciando en nodo {NODE_ID}")
-    while True:
-        emit_pulse()
-        time.sleep(INTERVAL)
+    ejecutar()
