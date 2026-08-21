@@ -53,3 +53,7 @@ Author: Cristhiam Leonardo Hernández Quiñonez (CLHQ)
 © HormigasAIS • Lenguaje Binario HormigasAIS (LBH)
 
 [hormigasais.com](https://hormigasais.com) | [@Thrumanshow](https://github.com/Thrumanshow)
+
+## Curso Práctico
+
+El directorio [`course/`](./course/) contiene un laboratorio educativo aislado para aprender administración Edge y protocolos LBH desde Android/Termux. Sus scripts utilizan fixtures y no requieren secretos reales. Consulta [`course/README.md`](./course/README.md) para comenzar.
