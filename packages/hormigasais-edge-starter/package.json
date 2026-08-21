@@ -1,0 +1,26 @@
+{
+  "name": "@hormigasais/edge-starter",
+  "version": "0.1.0",
+  "description": "Offline-first Edge starter CLI for Termux and Linux, using public fixtures only.",
+  "keywords": ["hormigasais", "edge", "termux", "linux", "devops", "security-lab"],
+  "homepage": "https://github.com/Thrumanshow/hormigasais-edge-starter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thrumanshow/hormigasais-edge-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Thrumanshow/hormigasais-edge-starter/issues"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "hormigasais-edge": "bin/hormigasais-edge.js"
+  },
+  "files": ["bin", "runtime", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node bin/hormigasais-edge.js validate",
+    "pack:check": "npm pack --dry-run --json"
+  }
+}

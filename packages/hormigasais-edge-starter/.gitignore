@@ -1,0 +1,6 @@
+.hormigasais-edge-lab/
+.env
+*.log
+*.tmp
+*.key
+*.pem

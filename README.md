@@ -4,16 +4,31 @@ Starter oficial para desplegar un **nodo soberano** de HormigasAIS con agentes L
 
 > "Soberanía digital en el edge"
 
-## 🚀 Instalación Rápida
+## 🚀 Instalación
 
-```bash
-git clone https://github.com/Thrumanshow/hormigasais-edge-starter.git
-cd hormigasais-edge-starter
-bash bootstrap.sh
-python3 generator.py
-```
+### Opción 1 — Starter CLI vía npm (recomendado)
 
-> ⚠️ El comando `npx create-hormigas-node` aún no está publicado en npm. Usa el método manual mostrado arriba.
+El starter técnico se distribuye como paquete npm independiente, sin el contenido pedagógico completo:
+
+    npm install -g @hormigasais/edge-starter
+    hormigasais-edge --help
+    hormigasais-edge bootstrap
+    hormigasais-edge validate
+
+Por defecto, el laboratorio se crea en .hormigasais-edge-lab/ en el directorio actual. Puedes cambiar la ubicación con LAB_DIR:
+
+    LAB_DIR="$HOME/hormigasais-edge-lab" hormigasais-edge bootstrap
+
+Paquete: [@hormigasais/edge-starter](https://www.npmjs.com/package/@hormigasais/edge-starter)
+
+### Opción 2 — Clonar el repositorio completo (incluye el curso)
+
+    git clone https://github.com/Thrumanshow/hormigasais-edge-starter.git
+    cd hormigasais-edge-starter
+    bash bootstrap.sh
+    python3 generator.py
+
+Usa esta opción si además del starter quieres acceso al curso práctico completo (./course/).
 
 ## ¿Qué incluye?
 
