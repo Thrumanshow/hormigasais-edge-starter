@@ -1,0 +1,7 @@
+{
+  "operation": "LAB_VALIDATE",
+  "node": "nodo-estudiante-01",
+  "mode": "offline",
+  "payload": "LBH://COURSE/VALIDATION",
+  "signature": "fixture-only-not-a-real-signature"
+}

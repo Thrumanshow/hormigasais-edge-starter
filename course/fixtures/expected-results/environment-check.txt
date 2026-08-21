@@ -1,0 +1,2 @@
+OK: Entorno de laboratorio compatible (Bash, Python3, Git detectados).
+exit_code=0

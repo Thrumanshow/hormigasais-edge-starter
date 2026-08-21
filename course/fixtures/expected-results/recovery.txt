@@ -1,0 +1,3 @@
+FAILED_VALIDATION
+ROLLED_BACK
+final_state=previous_valid_state
