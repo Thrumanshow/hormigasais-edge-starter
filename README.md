@@ -72,3 +72,20 @@ Author: Cristhiam Leonardo Hernández Quiñonez (CLHQ)
 ## Curso Práctico
 
 El directorio [`course/`](./course/) contiene un laboratorio educativo aislado para aprender administración Edge y protocolos LBH desde Android/Termux. Sus scripts utilizan fixtures y no requieren secretos reales. Consulta [`course/README.md`](./course/README.md) para comenzar.
+
+---
+
+## 📄 Componentes y Enlaces del Ecosistema
+
+| Repo | Descripción |
+| :--- | :--- |
+| **LBH-Net** | Red soberana P2P :9199/:9200 |
+| **Institucionalidad** | Foundation & Governance |
+
+---
+
+### Arquitectura y Ecosistema HormigasAIS
+* **Red P2P Base:** [LBH-Net](https://github.com/HormigasAIS/LBH-Net) — Red soberana distribuida basada en Protocolo LBH (Termux / UDP :9199 / TCP :9200 / SQLite / Ed25519).
+* **Vitrina Oficial:** [hormigasais.com](https://hormigasais.com)
+* **Documentación Técnica:** [docs.hormigasais.com](https://docs.hormigasais.com)
+* **Fundador:** CLHQ — Cristhiam Leonardo Hernández Quiñonez | El Salvador 2026 | DOI: 10.5281/zenodo.17767205
