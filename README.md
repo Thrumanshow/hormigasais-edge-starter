@@ -89,3 +89,9 @@ El directorio [`course/`](./course/) contiene un laboratorio educativo aislado p
 * **Vitrina Oficial:** [hormigasais.com](https://hormigasais.com)
 * **Documentación Técnica:** [docs.hormigasais.com](https://docs.hormigasais.com)
 * **Fundador:** CLHQ — Cristhiam Leonardo Hernández Quiñonez | El Salvador 2026 | DOI: 10.5281/zenodo.17767205
+
+## Licencia
+
+HormigasAIS Source-Available License v1.0 (ver `LICENSE`). Puedes leer y estudiar el código, e instalar el paquete para generar y probar un nodo propio con fines personales no comerciales. El uso en producción, la redistribución y el uso comercial requieren autorización de CLHQ.
+
+Las versiones 0.1.0 a 0.1.2 se publicaron declarando MIT; desde la 0.1.3 rige esta licencia.

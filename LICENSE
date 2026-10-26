@@ -17,6 +17,12 @@ Licenciante.
   - Leer y estudiar el código fuente con fines de evaluación o auditoría.
   - Hacer fork privado únicamente para revisión personal, sin distribuir
     ni desplegar en producción.
+  - Instalar el paquete desde el registro npm y ejecutar el generador
+    (create-hormigas-node) para crear y probar un nodo propio con fines
+    de evaluación, aprendizaje o uso personal no comercial. Los archivos
+    de configuración generados para el nodo (p. ej. node_config.json)
+    pertenecen a quien los genera. El uso en producción sigue sujeto
+    a la sección 3.
 
 3. Lo que requiere autorización explícita de CLHQ
 

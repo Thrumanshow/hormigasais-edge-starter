@@ -28,3 +28,4 @@ fix_*.sh
 git_status_*.txt
 npm_pack_*.log
 .hormigasais-edge-lab/
+.hormigasais/node_config.json

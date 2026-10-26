@@ -15,3 +15,7 @@ audit_*.sh
 logs/
 patch_*.sh
 update_*.sh
+
+__pycache__/
+**/__pycache__/
+*.pyc
